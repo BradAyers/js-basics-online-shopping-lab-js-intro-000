@@ -61,13 +61,12 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   if (cardNumber) {
-    //var total = 0;
-    //for (var i = 0; i < cart.length; i++) {
-      //total = total + cart[i].itemPrice;
-      console.log(cardNumber)
-    //}
-    //cart.splice(0, cart.length);
-    //Return `Your total cost is ${total}, which will be charged to the card ${cardNumber}.`;
+    var total = 0;
+    for (var i = 0; i < cart.length; i++) {
+      total = total + cart[i].itemPrice;
+    }
+    cart.splice(0, cart.length);
+    return `Your total cost is ${total}, which will be charged to the card ${cardNumber}.`;
   }
-  Return "Sorry, we don't have a credit card on file for you.";
+  return "Sorry, we don't have a credit card on file for you.";
 }
