@@ -61,9 +61,10 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   if (cardNumber) {
-    var total = 0;
-    for (var i = 0; i < cart.length; i++) {
-      total = total + cart[i].itemPrice;
+    //var total = 0;
+    //for (var i = 0; i < cart.length; i++) {
+      //total = total + cart[i].itemPrice;
+      console.log(cardNumber)
     }
     cart.splice(0, cart.length);
     Return `Your total cost is ${total}, which will be charged to the card ${cardNumber}.`;
